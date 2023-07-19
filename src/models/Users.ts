@@ -8,7 +8,7 @@ class Users {
     email: string,
     username: string,
     private password: string,
-    tweets: Tweet[]
+    tweets?: Tweet[]
   ) {
     this.id = uuid();
   }
