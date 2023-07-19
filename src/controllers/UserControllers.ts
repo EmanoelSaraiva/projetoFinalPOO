@@ -8,15 +8,22 @@ class UserControllers {
     if (validated) {
       const newUser = new Users(
         data.name,
+        data.email,
         data.username,
-        data.password,
-        data.email
+        data.password
       );
       users.push(newUser);
+      console.log(`Usuario criado com sucesso!`);
       return newUser;
     } else {
       console.log("Dados invalidos");
       return false;
     }
   }
+
+  public list() {
+    console.log(users);
+  }
 }
+
+export default new UserControllers();
