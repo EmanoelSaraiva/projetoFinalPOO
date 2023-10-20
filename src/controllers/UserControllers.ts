@@ -12,9 +12,13 @@ class UserControllers {
     const validated = ValidateDataUser.validatedUsername(username);
 
     if (validated) {
-      const newUser = new Users(name, email, username, password);
+      const newUser = new Users(
+        data.name,
+        data.username,
+        data.password,
+        data.email
+      );
       users.push(newUser);
-      console.log(`Usuario criado com sucesso!`);
       return newUser;
     }
   }
@@ -40,10 +44,4 @@ class UserControllers {
       return userId.getDetails();
     }
   }
-
-  public list() {
-    console.log(users);
-  }
 }
-
-export default new UserControllers();

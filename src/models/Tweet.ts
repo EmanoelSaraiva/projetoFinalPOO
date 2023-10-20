@@ -6,16 +6,21 @@ import { Reply } from "./Reply";
 class Tweet {
   private id: string;
   private content: string;
+<<<<<<< HEAD
   private type: Type;
   private user: string;
   private likes: string[];
   private replys: Reply[];
+=======
+  private type: string;
+>>>>>>> 82fae40ea50f97de1511354d87568ed139e8d7de
 
   constructor(content: string, userId: string, type: Type) {
     this.user = this.setUser(userId);
     this.id = uuid();
     this.content = content;
     this.type = type;
+<<<<<<< HEAD
     this.setUser(userId);
     this.likes = [];
     this.replys = [];
@@ -74,6 +79,8 @@ class Tweet {
     } else {
       throw new Error("Usuario nao encontrado");
     }
+=======
+>>>>>>> 82fae40ea50f97de1511354d87568ed139e8d7de
   }
 }
 

@@ -4,6 +4,7 @@ import { tweets } from "../database";
 
 export class Users {
   private id: string;
+<<<<<<< HEAD
   public username: string;
   private email: string;
   private name: string;
@@ -11,11 +12,27 @@ export class Users {
   private follow: string[];
 
   constructor(name: string, email: string, username: string, password: string) {
+=======
+  private username: string;
+  private email: string;
+  private name: string;
+  private password: string;
+  private tweets: Tweet[];
+
+  constructor(
+    name: string,
+    email: string,
+    username: string,
+    password: string,
+    tweets?: Tweet[]
+  ) {
+>>>>>>> 82fae40ea50f97de1511354d87568ed139e8d7de
     this.id = uuid();
     this.name = name;
     this.email = email;
     this.username = username;
     this.password = password;
+<<<<<<< HEAD
     this.follow = [];
   }
 
@@ -58,5 +75,8 @@ export class Users {
 
   public getReplays() {
     return tweets.map((tweet) => tweet.getDatails().content);
+=======
+    this.tweets = [];
+>>>>>>> 82fae40ea50f97de1511354d87568ed139e8d7de
   }
 }

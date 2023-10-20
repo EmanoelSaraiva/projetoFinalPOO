@@ -1,5 +1,6 @@
 import { tweets } from "../database";
 import { Tweet } from "../models";
+<<<<<<< HEAD
 import { Type } from "../models/Type";
 
 class TweetsControllers {
@@ -34,6 +35,14 @@ class TweetsControllers {
       console.log("Tweet não encontrado");
       return;
     }
+=======
+
+class TweetsControllers {
+  public add(data: any): void {
+    const newTweets = new Tweet(data.content, data.type);
+
+    tweets.push(newTweets);
+>>>>>>> 82fae40ea50f97de1511354d87568ed139e8d7de
   }
 
   public list() {
