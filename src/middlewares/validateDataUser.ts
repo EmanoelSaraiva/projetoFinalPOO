@@ -1,9 +1,16 @@
-function validateDataUser(data: any): boolean {
-  const validated: boolean = true;
-  if (!data.name || !data.email || !data.password || !data.username) {
-    return false;
+import { users } from "../database";
+
+class ValidateDataUser {
+  public validatedUsername(username: string) {
+    const validated = users.some((u) => u.username === username);
+
+    if (!validated === false) {
+      console.log("Usuario já cadastrado!");
+      return false;
+    } else {
+      return true;
+    }
   }
-  return validated;
 }
 
-export default validateDataUser;
+export default new ValidateDataUser();
